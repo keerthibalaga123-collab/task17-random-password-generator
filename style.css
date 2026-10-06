@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top left, #dbeafe, transparent 35%),
+        radial-gradient(circle at bottom right, #ede9fe, transparent 35%),
+        #f8fafc;
+
+    color: #172554;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+}
+
+/* Main Card */
+
+.password-card {
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 20px 50px rgba(30, 64, 175, 0.12);
+
+    backdrop-filter: blur(10px);
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.subtitle {
+    color: #f97316;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #172554;
+}
+
+.description {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Password Display */
+
+.password-box {
+    display: flex;
+
+    background: #f8fafc;
+
+    border: 2px solid #dbeafe;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    margin-bottom: 5px;
+}
+
+.password-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding: 17px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #1e3a8a;
+
+    letter-spacing: 1px;
+}
+
+.password-box input::placeholder {
+    color: #94a3b8;
+    font-size: 13px;
+    letter-spacing: 0;
+}
+
+.copy-btn {
+    width: 60px;
+
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.copy-btn:hover {
+    background: #1d4ed8;
+}
+
+.copy-message {
+    height: 20px;
+
+    text-align: right;
+
+    font-size: 12px;
+
+    color: #16a34a;
+}
+
+/* Length */
+
+.length-section {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.length-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+.length-header label {
+    font-weight: bold;
+    color: #334155;
+}
+
+#lengthValue {
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+/* Range Slider */
+
+input[type="range"] {
+    width: 100%;
+
+    height: 7px;
+
+    accent-color: #2563eb;
+
+    cursor: pointer;
+}
+
+/* Options */
+
+.options {
+    margin-bottom: 25px;
+}
+
+.options h2 {
+    font-size: 17px;
+
+    margin-bottom: 15px;
+
+    color: #334155;
+}
+
+.option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px 15px;
+
+    margin-bottom: 9px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.option:hover {
+    border-color: #93c5fd;
+
+    background: #eff6ff;
+}
+
+.option input {
+    display: none;
+}
+
+/* Custom Checkbox */
+
+.checkmark {
+    width: 22px;
+    height: 22px;
+
+    border: 2px solid #94a3b8;
+
+    border-radius: 6px;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+.option input:checked + .checkmark {
+    background: #2563eb;
+
+    border-color: #2563eb;
+}
+
+.option input:checked + .checkmark::after {
+    content: "✓";
+
+    position: absolute;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    left: 3px;
+
+    top: -1px;
+}
+
+.option strong {
+    display: block;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+.option small {
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+/* Strength */
+
+.strength-section {
+    margin-bottom: 25px;
+}
+
+.strength-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+
+    color: #64748b;
+
+    margin-bottom: 9px;
+}
+
+#strengthText {
+    color: #16a34a;
+}
+
+.strength-bar {
+    width: 100%;
+
+    height: 7px;
+
+    background: #e2e8f0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+#strengthProgress {
+    width: 100%;
+
+    height: 100%;
+
+    background: #22c55e;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+/* Generate Button */
+
+.generate-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.3);
+}
+
+.generate-btn:active {
+    transform: translateY(0);
+}
+
+/* Error */
+
+.error-message {
+    text-align: center;
+
+    color: #dc2626;
+
+    font-size: 13px;
+
+    margin-top: 12px;
+
+    min-height: 18px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .password-card {
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .password-box input {
+        font-size: 15px;
+    }
+
+    .copy-btn {
+        width: 55px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .password-card {
+        padding: 20px 15px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .option {
+        padding: 11px;
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Random Password Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="password-card">
+
+            <div class="header">
+                <p class="subtitle">TASK 17 • WEB DEVELOPMENT</p>
+                <h1>Random Password Generator</h1>
+                <p class="description">
+                    Create a strong and secure password in seconds.
+                </p>
+            </div>
+
+            <!-- Password Display -->
+            <div class="password-box">
+                <input
+                    type="text"
+                    id="password"
+                    placeholder="Your password will appear here"
+                    readonly
+                >
+
+                <button id="copyBtn" class="copy-btn" title="Copy password">
+                    📋
+                </button>
+            </div>
+
+            <p id="copyMessage" class="copy-message"></p>
+
+            <!-- Password Length -->
+            <div class="length-section">
+
+                <div class="length-header">
+                    <label for="length">Password Length</label>
+                    <span id="lengthValue">12</span>
+                </div>
+
+                <input
+                    type="range"
+                    id="length"
+                    min="4"
+                    max="30"
+                    value="12"
+                >
+
+            </div>
+
+            <!-- Character Options -->
+            <div class="options">
+
+                <h2>Character Types</h2>
+
+                <label class="option">
+                    <input type="checkbox" id="uppercase" checked>
+                    <span class="checkmark"></span>
+                    <span>
+                        <strong>Uppercase Letters</strong>
+                        <small>A-Z</small>
+                    </span>
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" id="lowercase" checked>
+                    <span class="checkmark"></span>
+                    <span>
+                        <strong>Lowercase Letters</strong>
+                        <small>a-z</small>
+                    </span>
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" id="numbers" checked>
+                    <span class="checkmark"></span>
+                    <span>
+                        <strong>Numbers</strong>
+                        <small>0-9</small>
+                    </span>
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" id="symbols" checked>
+                    <span class="checkmark"></span>
+                    <span>
+                        <strong>Symbols</strong>
+                        <small>! @ # $ % &</small>
+                    </span>
+                </label>
+
+            </div>
+
+            <!-- Password Strength -->
+            <div class="strength-section">
+
+                <div class="strength-header">
+                    <span>Password Strength</span>
+                    <strong id="strengthText">Strong</strong>
+                </div>
+
+                <div class="strength-bar">
+                    <div id="strengthProgress"></div>
+                </div>
+
+            </div>
+
+            <!-- Generate Button -->
+            <button id="generateBtn" class="generate-btn">
+                🔐 Generate Password
+            </button>
+
+            <p id="errorMessage" class="error-message"></p>
+
+        </section>
+
+        <footer>
+            <p>Task 17 • Random Password Generator</p>
+            <p>Built with HTML5 • CSS3 • JavaScript</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
